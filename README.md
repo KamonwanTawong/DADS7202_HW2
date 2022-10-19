@@ -250,3 +250,15 @@ plt.show()
 ```
 <img width="983" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 34 10" src="https://user-images.githubusercontent.com/107698198/196667937-0be60610-327b-42d4-8ade-1a0a42b6cb67.png">
 
+## MODEL(1) ResNet50
+### Import Model and Finetuning 
+
+Optimizer that implements the RMSprop algorithm. <br />
+Learning Rate = 0.0001 <br />
+Computes the categorical crossentropy loss. <br />
+ทำการ Train model ทั้งหมด 50 ครั้ง <br />
+ผลจากการ Train พบว่า ค่าความแม่นยำสูงที่สุดมีค่า 0.0470 <br />
+ค่าความแม่นยำของ Model อยู่ที่ 3.05%
+
+<img width="527" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 33 22" src="https://user-images.githubusercontent.com/107698198/196670605-2e9e7672-8fc6-43db-b6a2-9367f62d499c.png">
+<img width="983" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 34 10" src="https://user-images.githubusercontent.com/107698198/196670608-0f9b47e8-dfb2-41f6-863d-46408be29492.png">

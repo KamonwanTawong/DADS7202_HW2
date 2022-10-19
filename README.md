@@ -259,4 +259,4 @@ plt.show()
 | VGG-16  | 0.6810  | 68.54%  | 0.7280  | 73.47%  |
 | ResNet50 | 0.0470  | 3.05%  | 0.4207  | 38.26%  |
 | EfficientNet  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-| self-build model | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| self-build model | 0.0274  | 0.94%  | 0.0626  | 5.87  |

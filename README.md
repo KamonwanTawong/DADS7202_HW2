@@ -43,6 +43,7 @@ dataframe.head()
 ```
 <img width="411" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 33 19" src="https://user-images.githubusercontent.com/107698198/196654392-bef1824a-e678-44ac-a91b-d3e7cd5a5b5e.png">
 
+แสดงตัวอย่างรูปภาพ
 ```
 fig, axes = plt.subplots(nrows=5, ncols=5, figsize=(15,10), subplot_kw={'xticks':[], 'yticks':[]})
 for i, ax in enumerate(axes.flat):
@@ -50,3 +51,4 @@ for i, ax in enumerate(axes.flat):
     ax.set_title(dataframe.labels[i])
 plt.show()
 ```
+<img width="876" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 39 49" src="https://user-images.githubusercontent.com/107698198/196655995-e7598bda-6463-4c6c-881c-e41250ef74d5.png">

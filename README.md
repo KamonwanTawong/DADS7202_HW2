@@ -84,8 +84,9 @@ test_generator = test_data_gen.flow_from_dataframe(dataframe=test,
 ```                                                 
 <img width="525" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 46 57" src="https://user-images.githubusercontent.com/107698198/196657629-d4585779-9741-4258-8ceb-70eb2b2a7738.png">
 
-## Import Model and Finetuning
-### Model(1) VGG16 <br />
+## MODEL(1) VGG16 
+### Import Model and Finetuning 
+
 Optimizer that implements the RMSprop algorithm. <br />
 Learning Rate = 0.0001 <br />
 Computes the categorical crossentropy loss. <br />
@@ -168,8 +169,7 @@ plt.show()
 ```
 <img width="972" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 18 59" src="https://user-images.githubusercontent.com/107698198/196664672-bffe0a80-7085-4085-afde-e8a5cd1186b9.png">
 
-## Base Model
-### Model(1) VGG16 <br />
+### Base Model
 Optimizer that implements the RMSprop algorithm. <br />
 Learning Rate = 0.0001 <br />
 Computes the categorical crossentropy loss. <br />

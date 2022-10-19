@@ -55,7 +55,7 @@ plt.show()
 all_train, test = train_test_split(shuffled_dataframe, test_size=0.2, random_state=42)
 train, val = train_test_split(all_train, test_size=0.3, random_state=42)
 ```
-ปรับแต่งชุดรูปภาพที่ใช้สำหรับ Train, Validation, Test ให้มีคุณลักษณะที่เหมือนกัน 
+ปรับแต่งชุดรูปภาพที่ใช้สำหรับ Train, Validation และ Test ให้มีคุณลักษณะที่เหมือนกัน 
 ```
 training_data_gen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255.0,rotation_range = 40, width_shift_range = 0.2, height_shift_range = 0.2, shear_range = 0.2, zoom_range = 0.2, horizontal_flip = True)
 training_generator = training_data_gen.flow_from_dataframe(dataframe=train,

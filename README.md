@@ -253,7 +253,7 @@ plt.show()
 
 
 
-
+ค่าที่ได้จาก model อื่นๆ เป็นดังตารางสรุปผลด้านล่าง
 | Pre-Trained Models  | val_acc train finetuning  | evaluate test finetuning  | val_acc train base model | evaluate test base model |
 | :---:  | :---:  | :---:  | :---:  | :---:  |
 | VGG-16  | 0.6810  | 68.54%  | 0.7280  | 73.47%  |

@@ -260,6 +260,15 @@ plt.show()
 <img width="410" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 20 42" src="https://user-images.githubusercontent.com/107698198/196689259-b6e358da-d712-4e4a-9ac4-a764c1f7d536.png">
 <img width="395" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 20 54" src="https://user-images.githubusercontent.com/107698198/196689267-7a43a9ec-662e-4de3-b066-20bff2579ebe.png">
 
+## MODEL(4) self-build model
+### Model Finetuning 
+<img width="407" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 22 38" src="https://user-images.githubusercontent.com/107698198/196689766-89c8c5af-9b15-4d25-82ee-fb85f54b7f86.png">
+<img width="413" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 22 47" src="https://user-images.githubusercontent.com/107698198/196689778-b2c415f4-d4a8-4b19-a31a-ee6d3ab6a176.png">
+
+### Base Model
+<img width="397" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 22 59" src="https://user-images.githubusercontent.com/107698198/196689789-3e6158a8-a848-4f3c-8d0c-268d56ec80b8.png">
+<img width="397" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 23 07" src="https://user-images.githubusercontent.com/107698198/196689792-780ff85b-8a42-48cb-984d-23097a289d20.png">
+
 
 
 

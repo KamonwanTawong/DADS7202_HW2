@@ -103,11 +103,25 @@ x = layers.Dense(77, activation='softmax')(x)
 model = tf.keras.models.Model(base_model.input, x)
 model.compile(optimizer = tf.keras.optimizers.RMSprop(learning_rate=0.0001), loss = 'categorical_crossentropy',metrics = ['acc'])
 ```
-Train model <br />
-epochs = 50
+ทำการ Train model ทั้งหมด 50 ครั้ง
+
 ```
 vgghist = model.fit(training_generator, validation_data = validation_generator, epochs = 50)
 ```
 <img width="989" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 59 19" src="https://user-images.githubusercontent.com/107698198/196660497-b737165b-f7f5-4ca1-bbb1-58059a35d39d.png">
 
-ผลจากการ Train พบว่า ค่าความแม่นยำสูงที่สุดมีค่า 0.6810
+ผลจากการ Train พบว่า ค่าความแม่นยำสูงที่สุดมีค่า 0.6810 <br />
+
+จากนั้นนำผลการ Train มาสร้างเป็นกราฟ ช่วยให้เราเห็นเทรนด์ ของการ Train Model ซึ่งสามารถ สรุปผลได้ว่า เมื่อเราทำการ Train Model มากครั้งขึ้นเรื่อย ๆ จะทำให้ความคลาดเคลื่อนของ Model ลดลง หรืออีกนัยหนึ่งคือ Model มีความแม่นยำมากยิ่งขึ้น
+
+```
+model_train_loss = vgghist.history['loss']
+model_val_loss = vgghist.history['val_loss']
+
+plt.plot(vgghist.epoch, model_train_loss, label='Trainnig Loss')
+plt.plot(vgghist.epoch, model_val_loss, label='Validation Loss')
+plt.grid(True)
+plt.legend()
+```
+<img width="396" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 05 16" src="https://user-images.githubusercontent.com/107698198/196661886-811de5b7-dff3-45fc-baf3-98c5ef7ab143.png">
+

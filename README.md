@@ -52,3 +52,36 @@ for i, ax in enumerate(axes.flat):
 plt.show()
 ```
 <img width="876" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 39 49" src="https://user-images.githubusercontent.com/107698198/196655995-e7598bda-6463-4c6c-881c-e41250ef74d5.png">
+
+แบ่งชุดของมูล Train, Validation และ Test
+```
+all_train, test = train_test_split(shuffled_dataframe, test_size=0.2, random_state=42)
+train, val = train_test_split(all_train, test_size=0.3, random_state=42)
+```
+ปรับแต่งชุดรูปภาพที่ใช้สำหรับ Train, Validation, Test ให้มีคุณลักษณะที่เหมือนกัน 
+```
+training_data_gen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255.0,rotation_range = 40, width_shift_range = 0.2, height_shift_range = 0.2, shear_range = 0.2, zoom_range = 0.2, horizontal_flip = True)
+training_generator = training_data_gen.flow_from_dataframe(dataframe=train,
+                                                          x_col='images', y_col='labels',
+                                                          target_size=(224, 224),
+                                                          color_mode='rgb',
+                                                          class_mode='categorical',
+                                                          batch_size=64)
+
+val_data_gen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255.0)
+validation_generator = val_data_gen.flow_from_dataframe(dataframe=val,
+                                                       x_col='images', y_col='labels',
+                                                       target_size=(224, 224),
+                                                       color_mode='rgb',
+                                                       class_mode='categorical',
+                                                       batch_size=64)
+
+test_data_gen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255.0)
+test_generator = test_data_gen.flow_from_dataframe(dataframe=test,
+                                                  x_col='images', y_col='labels',
+                                                  target_size=(224, 224),
+                                                  color_mode='rgb',
+                                                  class_mode='categorical',
+                                                  batch_size=64,
+                                                  shuffle=False)
+```                                                 

@@ -85,3 +85,6 @@ test_generator = test_data_gen.flow_from_dataframe(dataframe=test,
                                                   batch_size=64,
                                                   shuffle=False)
 ```                                                 
+<img width="525" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 46 57" src="https://user-images.githubusercontent.com/107698198/196657629-d4585779-9741-4258-8ceb-70eb2b2a7738.png">
+
+## Import Model and Finetuning

@@ -85,7 +85,7 @@ test_generator = test_data_gen.flow_from_dataframe(dataframe=test,
 <img width="525" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 46 57" src="https://user-images.githubusercontent.com/107698198/196657629-d4585779-9741-4258-8ceb-70eb2b2a7738.png">
 
 ## Import Model and Finetuning
-Model(1) VGG16 <br />
+### Model(1) VGG16 <br />
 Optimizer that implements the RMSprop algorithm. <br />
 Learning Rate = 0.0001 <br />
 Computes the categorical crossentropy loss. <br />
@@ -110,9 +110,8 @@ vgghist = model.fit(training_generator, validation_data = validation_generator, 
 ```
 <img width="989" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 59 19" src="https://user-images.githubusercontent.com/107698198/196660497-b737165b-f7f5-4ca1-bbb1-58059a35d39d.png">
 
-ผลจากการ Train พบว่า ค่าความแม่นยำสูงที่สุดมีค่า 0.6810 <br />
+ผลจากการ Train พบว่า ค่าความแม่นยำสูงที่สุดมีค่า 0.6810 
 
-จากนั้นนำผลการ Train มาสร้างเป็นกราฟ ช่วยให้เราเห็นเทรนด์ ของการ Train Model ซึ่งสามารถ สรุปผลได้ว่า เมื่อเราทำการ Train Model มากครั้งขึ้นเรื่อย ๆ จะทำให้ความคลาดเคลื่อนของ Model ลดลง หรืออีกนัยหนึ่งคือ Model มีความแม่นยำมากยิ่งขึ้น
 
 ```
 model_train_loss = vgghist.history['loss']
@@ -124,4 +123,22 @@ plt.grid(True)
 plt.legend()
 ```
 <img width="396" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 05 16" src="https://user-images.githubusercontent.com/107698198/196661886-811de5b7-dff3-45fc-baf3-98c5ef7ab143.png">
+
+จากนั้นนำผลการ Train มาสร้างเป็นกราฟ ช่วยให้เราเห็นเทรนด์ ของการ Train Model ซึ่งสามารถ สรุปผลได้ว่า เมื่อเราทำการ Train Model มากครั้งขึ้นเรื่อย ๆ จะทำให้ความคลาดเคลื่อนของ Model ลดลง หรืออีกนัยหนึ่งคือ Model มีความแม่นยำมากยิ่งขึ้น
+
+```
+train_acc = vgghist.history['acc']
+val_acc = vgghist.history['val_acc']
+
+plt.plot(vgghist.epoch, train_acc, label='Trainnig Accuracy')
+plt.plot(vgghist.epoch, val_acc, label='Validation Accuracy')
+plt.grid(True)
+plt.legend()
+```
+<img width="389" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 08 44" src="https://user-images.githubusercontent.com/107698198/196662618-053deeb2-f75a-41a3-b6a2-e09329bfc4ae.png">
+
+ในส่วนของค่าความแม่นยำนั้น เมื่อเรานำผลการ Train ทั้ง 50 ครั้ง มาสร้างเป็นกราฟ ช่วยให้เราเห็นเทรนด์ของความแม่นยำจากการ Train Model ในลักษณะที่ผกผันกับความคลาดเคลื่อนที่กล่าวไปก่อนหน้า
+
+
+
 

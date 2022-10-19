@@ -168,3 +168,20 @@ plt.show()
 ```
 <img width="972" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 18 59" src="https://user-images.githubusercontent.com/107698198/196664672-bffe0a80-7085-4085-afde-e8a5cd1186b9.png">
 
+## Base Model
+### Model(1) VGG16 <br />
+Optimizer that implements the RMSprop algorithm. <br />
+Learning Rate = 0.0001 <br />
+Computes the categorical crossentropy loss. <br />
+
+```
+from tensorflow.keras.applications.vgg16 import VGG16
+base_model = VGG16(input_shape = (224, 224, 3), include_top = False, weights = 'imagenet')
+```
+
+```
+y = layers.Flatten()(base_model.output)
+y = layers.Dense(77, activation='softmax')(y)
+base_model = tf.keras.models.Model(base_model.input, y)
+base_model.compile(optimizer = tf.keras.optimizers.RMSprop(learning_rate=0.0001), loss = 'categorical_crossentropy',metrics = ['acc'])
+```

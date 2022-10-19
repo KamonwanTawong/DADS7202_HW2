@@ -11,6 +11,8 @@
 https://drive.google.com/drive/folders/1wjw-2dWe0zl6D040VFI2jUTjYxOe5RA1?usp=sharing
 
 ## PREPARE DATA
+นำเข้าชุดข้อมูลจาก Google Drive
+
 ```
 data_path = pathlib.Path(r"/content/drive/MyDrive/Colab Notebooks/CNN/data")
 
@@ -27,6 +29,7 @@ for item in all_images:
         label = splits[-2]
         labels.append(label)
 ```
+สร้าง data frame ของชุดข้อมูลจาก Google Drive ที่ประกอบด้วย Path ของรูปภาพแต่ละรูปและติด label ตามชื่อ Folder ให้กับภาพทั้งหมดเพื่อระบุจังหวัด
 
 ```
 image_pathes = pd.Series(images).astype(str)
@@ -37,4 +40,13 @@ dataframe =pd.concat([image_pathes, labels], axis=1)
 dataframe.columns = ['images', 'labels']
 
 dataframe.head()
+```
+<img width="411" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 33 19" src="https://user-images.githubusercontent.com/107698198/196654392-bef1824a-e678-44ac-a91b-d3e7cd5a5b5e.png">
+
+```
+fig, axes = plt.subplots(nrows=5, ncols=5, figsize=(15,10), subplot_kw={'xticks':[], 'yticks':[]})
+for i, ax in enumerate(axes.flat):
+    ax.imshow(plt.imread(dataframe.images[i]))
+    ax.set_title(dataframe.labels[i])
+plt.show()
 ```

@@ -254,7 +254,7 @@ plt.show()
 
 
 | Pre-Trained Models  | val_acc train finetuning  | evaluate test finetuning  | val_acc train base model | evaluate test base model |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
+| :---:  | :---:  | :---:  | :---:  | :---:  |
 | VGG-16  | 0.6810  | 68.54%  | 0.7280  | 73.47%  |
 | ResNet50 | 0.0470  | 3.05%  | 0.4207  | 38.26%  |
 | efn  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |

@@ -251,6 +251,16 @@ plt.show()
 ```
 <img width="983" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 34 10" src="https://user-images.githubusercontent.com/107698198/196667937-0be60610-327b-42d4-8ade-1a0a42b6cb67.png">
 
+## MODEL(2) ResNet50
+### Model Finetuning 
+<img width="387" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 18 51" src="https://user-images.githubusercontent.com/107698198/196688829-a58bca8f-d78c-41e6-96e3-63d646454de7.png">
+<img width="387" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 19 30" src="https://user-images.githubusercontent.com/107698198/196688958-4c5108b3-ea79-4b2c-b81b-15fd96079bb9.png">
+
+### Base Model
+<img width="410" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 20 42" src="https://user-images.githubusercontent.com/107698198/196689259-b6e358da-d712-4e4a-9ac4-a764c1f7d536.png">
+<img width="395" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 20 54" src="https://user-images.githubusercontent.com/107698198/196689267-7a43a9ec-662e-4de3-b066-20bff2579ebe.png">
+
+
 
 
 ค่าที่ได้จาก model อื่น ๆ เป็นดังตารางสรุปผลด้านล่าง

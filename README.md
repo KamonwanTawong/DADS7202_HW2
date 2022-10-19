@@ -138,7 +138,33 @@ plt.legend()
 <img width="389" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 08 44" src="https://user-images.githubusercontent.com/107698198/196662618-053deeb2-f75a-41a3-b6a2-e09329bfc4ae.png">
 
 ในส่วนของค่าความแม่นยำนั้น เมื่อเรานำผลการ Train ทั้ง 50 ครั้ง มาสร้างเป็นกราฟ ช่วยให้เราเห็นเทรนด์ของความแม่นยำจากการ Train Model ในลักษณะที่ผกผันกับความคลาดเคลื่อนที่กล่าวไปก่อนหน้า
+<br />
+ประเมินความแม่นยำของ Model
+```
+model.evaluate(test_generator)
+```
+<img width="697" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 11 10" src="https://user-images.githubusercontent.com/107698198/196663103-8fbd3c6e-5414-4d75-8142-48c42319d998.png">
+ค่าความแม่นยำของ Model อยู่ที่ 68.54%
+<br /><br />
+ทดสอบแบบจำลองหรือ Test Model 
 
+```
+test_dup = test.copy()
+test_dup = test_dup.reset_index(drop=True)
+test_dup["predict"] = pd.DataFrame(predicted_label_batch)
+test_dup.head()
+```
+<img width="530" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 13 47" src="https://user-images.githubusercontent.com/107698198/196663643-5a46ef66-31c0-40e5-975c-d466545b5365.png">
 
+ทำการหารูปที่ทายผิดพลาดโดยของจังหวัด โดยที่ สีเขียว หมายถึง ทายถูก และสีแดง หมายถึง ทายผิด
 
+```
+fig, axes = plt.subplots(nrows=10, ncols=5, figsize=(20,20), subplot_kw={'xticks':[], 'yticks':[]})
+for i, ax in enumerate(axes.flat):
+    ax.imshow(plt.imread(test_dup.images[i]))
+    color = "green" if test_dup.predict[i] == test_dup.labels[i] else "red"
+    ax.set_title(test_dup.labels[i],color=color)
+plt.show()
+```
+<img width="972" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 18 59" src="https://user-images.githubusercontent.com/107698198/196664672-bffe0a80-7085-4085-afde-e8a5cd1186b9.png">
 

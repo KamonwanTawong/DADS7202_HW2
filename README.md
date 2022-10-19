@@ -138,7 +138,7 @@ plt.legend()
 <img width="389" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 08 44" src="https://user-images.githubusercontent.com/107698198/196662618-053deeb2-f75a-41a3-b6a2-e09329bfc4ae.png">
 
 ในส่วนของค่าความแม่นยำนั้น เมื่อเรานำผลการ Train ทั้ง 50 ครั้ง มาสร้างเป็นกราฟ ช่วยให้เราเห็นเทรนด์ของความแม่นยำจากการ Train Model ในลักษณะที่ผกผันกับความคลาดเคลื่อนที่กล่าวไปก่อนหน้า
-<br />
+<br /><br />
 ประเมินความแม่นยำของ Model
 ```
 model.evaluate(test_generator)
@@ -216,5 +216,35 @@ plt.legend()
 
 <img width="385" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 29 13" src="https://user-images.githubusercontent.com/107698198/196666871-ba79e1e7-51eb-45a2-a750-84e033c89ca0.png">
 ในส่วนของค่าความแม่นยำนั้น เมื่อเรานำผลการ Train ทั้ง 50 ครั้ง มาสร้างเป็นกราฟ ช่วยให้เราเห็นเทรนด์ของความแม่นยำจากการ Train Model ในลักษณะที่ผกผันกับความคลาดเคลื่อนที่กล่าวไปก่อนหน้า
-<br />
+<br /><br />
 ประเมินความแม่นยำของ Model
+```
+base_model.evaluate(test_generator)
+```
+<img width="696" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 31 20" src="https://user-images.githubusercontent.com/107698198/196667342-d5806e34-91d9-4122-a740-aed25b5e5cef.png">
+
+
+ค่าความแม่นยำของ Model อยู่ที่ 73.47%
+<br /><br />
+ทดสอบแบบจำลองหรือ Test Model 
+
+```
+test2_dup = test.copy()
+test2_dup = test2_dup.reset_index(drop=True)
+test2_dup["predict"] = pd.DataFrame(predicted2_label_batch)
+test2_dup.head()
+```
+<img width="527" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 33 22" src="https://user-images.githubusercontent.com/107698198/196667760-c90e2408-4a5e-43eb-b473-e25b98d3f0ae.png">
+
+ทำการหารูปที่ทายผิดพลาดโดยของจังหวัด โดยที่ สีเขียว หมายถึง ทายถูก และสีแดง หมายถึง ทายผิด
+
+```
+fig, axes = plt.subplots(nrows=10, ncols=5, figsize=(20,20), subplot_kw={'xticks':[], 'yticks':[]})
+for i, ax in enumerate(axes.flat):
+    ax.imshow(plt.imread(test2_dup.images[i]))
+    color = "green" if test2_dup.predict[i] == test2_dup.labels[i] else "red"
+    ax.set_title(test2_dup.labels[i],color=color)
+plt.show()
+```
+<img width="983" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 34 10" src="https://user-images.githubusercontent.com/107698198/196667937-0be60610-327b-42d4-8ade-1a0a42b6cb67.png">
+

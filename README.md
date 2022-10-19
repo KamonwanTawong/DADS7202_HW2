@@ -6,7 +6,7 @@
 โดยกรมศิลปากรเป็นผู้ออกแบบตราตามแนวคิดที่แต่ละจังหวัดกำหนดไว้ ในปัจจุบันเมื่อมีการตั้งจังหวัดขึ้นใหม่ ก็จะมีการออกแบบตราประจำจังหวัดด้วยเสมอ แต่ตราของบางจังหวัดที่ใช้อยู่นั้นบางตราก็ไม่ใช่ตราที่กรมศิลปากรเป็นผู้ออกแบบ บางจังหวัดก็เปลี่ยนไปใช้ตราประจำจังหวัดเป็นแบบอื่น บางที่ลักษณะของตราก็เพี้ยนไปจากลักษณะที่กรมศิลปากรออกแบบไว้ แต่ยังคงลักษณะหลัก ๆ ของตราเดิม
 
 ประเทศไทยมีทั้งหมด 77 จังหวัด จึงได้เก็บภาพแยกเป็น Folder ละ 1 จังหวัด โดยเก็บรวบรวมภาพให้ได้มากที่สุดเท่าที่รวบรวมได้ ซึ่งมีทั้งภาพที่นำมาจากอินเทอร์เน็ต 
-โดยใช้ Pre-Trained Models 4 โมเดล คือ VGG-16, ResNet50, EfficientNet และ model ที่ปรับค่าเอง
+โดยใช้ Pre-Trained Models 4 โมเดล คือ VGG-16, ResNet50, EfficientNet และ self-build model
 
 ## DATA
 https://drive.google.com/drive/folders/1wjw-2dWe0zl6D040VFI2jUTjYxOe5RA1?usp=sharing
@@ -259,4 +259,4 @@ plt.show()
 | VGG-16  | 0.6810  | 68.54%  | 0.7280  | 73.47%  |
 | ResNet50 | 0.0470  | 3.05%  | 0.4207  | 38.26%  |
 | EfficientNet  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-| model | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| self-build model | Content Cell  | Content Cell  | Content Cell  | Content Cell  |

@@ -34,11 +34,8 @@ for item in all_images:
 ```
 image_pathes = pd.Series(images).astype(str)
 labels = pd.Series(labels)
-
 dataframe =pd.concat([image_pathes, labels], axis=1)
-
 dataframe.columns = ['images', 'labels']
-
 dataframe.head()
 ```
 <img width="411" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 33 19" src="https://user-images.githubusercontent.com/107698198/196654392-bef1824a-e678-44ac-a91b-d3e7cd5a5b5e.png">
@@ -88,3 +85,29 @@ test_generator = test_data_gen.flow_from_dataframe(dataframe=test,
 <img width="525" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 46 57" src="https://user-images.githubusercontent.com/107698198/196657629-d4585779-9741-4258-8ceb-70eb2b2a7738.png">
 
 ## Import Model and Finetuning
+Model(1) VGG16 <br />
+Optimizer that implements the RMSprop algorithm. <br />
+Learning Rate = 0.0001 <br />
+Computes the categorical crossentropy loss. <br />
+
+```
+from tensorflow.keras.applications.vgg16 import VGG16
+base_model = VGG16(input_shape = (224, 224, 3), include_top = False, weights = 'imagenet')
+```
+```
+x = layers.Flatten()(base_model.output)
+x = layers.Dense(512, activation='relu')(x)
+x = layers.Dropout(0.5)(x)
+x = layers.Dense(77, activation='softmax')(x)
+
+model = tf.keras.models.Model(base_model.input, x)
+model.compile(optimizer = tf.keras.optimizers.RMSprop(learning_rate=0.0001), loss = 'categorical_crossentropy',metrics = ['acc'])
+```
+Train model <br />
+epochs = 50
+```
+vgghist = model.fit(training_generator, validation_data = validation_generator, epochs = 50)
+```
+<img width="989" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 16 59 19" src="https://user-images.githubusercontent.com/107698198/196660497-b737165b-f7f5-4ca1-bbb1-58059a35d39d.png">
+
+ผลจากการ Train พบว่า ค่าความแม่นยำสูงที่สุดมีค่า 0.6810

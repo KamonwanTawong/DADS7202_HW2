@@ -88,9 +88,12 @@ test_generator = test_data_gen.flow_from_dataframe(dataframe=test,
 ## MODEL(1) VGG16 
 ### Import Model and Finetuning 
 
-Optimizer that implements the RMSprop algorithm <br />
-Learning Rate = 0.0001 <br />
-Computes the categorical crossentropy loss <br />
+- Optimizer the RMSprop algorithm. <br />
+- Learning Rate = 0.0001 <br />
+- Loss ใช้ categorical crossentropy <br />
+- Output Dense Layer เป็น 77 ตามจำนวน class <br />
+- Metric ใช้ accuracy
+- Activation ใช้ softmax เพื่อให้ output แสดงผลออกมาเพียง class เดียว
 
 ```
 from tensorflow.keras.applications.vgg16 import VGG16
@@ -171,9 +174,12 @@ plt.show()
 <img width="972" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 17 18 59" src="https://user-images.githubusercontent.com/107698198/196664672-bffe0a80-7085-4085-afde-e8a5cd1186b9.png">
 
 ### Base Model
-Optimizer that implements the RMSprop algorithm. <br />
-Learning Rate = 0.0001 <br />
-Computes the categorical crossentropy loss. <br />
+- Optimizer the RMSprop algorithm. <br />
+- Learning Rate = 0.0001 <br />
+- Loss ใช้ categorical crossentropy <br />
+- Output Dense Layer เป็น 77 ตามจำนวน class <br />
+- Metric ใช้ accuracy
+- Activation ใช้ softmax เพื่อให้ output แสดงผลออกมาเพียง class เดียว
 
 ```
 from tensorflow.keras.applications.vgg16 import VGG16

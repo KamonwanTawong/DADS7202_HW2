@@ -302,7 +302,7 @@ plt.show()
 [1]	Purva Huilgol — Published On August 18, 2020 and Last Modified On June 15th, 2022 from https://www.analyticsvidhya.com/blog/2020/08/top-4-pre-trained-models-for-image-classification-with-python-code/ <br />
 [2]	(Sep 5, 2021). ‘DSE4 G.6’ from https://medium.com/botnoi-classroom/ส่งคุกกี้เสี่ยงทาย-ให้-ai-ทำนายสายพันธุ์มะม่วงกัน-d379b7fc6d6e <br />
 [3]	‘ImageClassification’ from https://github.com/nicknochnack/ImageClassification/blob/main/Getting%20Started.ipynb <br />
-[4]	
+[4]	'Build a Deep CNN Image Classifier with ANY Images' from https://youtu.be/jztwpsIzEGc
 
 
 ## END CREDIT

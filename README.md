@@ -260,6 +260,17 @@ plt.show()
 <img width="410" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 20 42" src="https://user-images.githubusercontent.com/107698198/196689259-b6e358da-d712-4e4a-9ac4-a764c1f7d536.png">
 <img width="395" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 20 54" src="https://user-images.githubusercontent.com/107698198/196689267-7a43a9ec-662e-4de3-b066-20bff2579ebe.png">
 
+
+## MODEL(3) EfficientNet
+### Model Finetuning 
+<img width="382" alt="ภาพถ่ายหน้าจอ 2565-10-20 เวลา 17 56 35" src="https://user-images.githubusercontent.com/107698198/196930684-35727cb0-e636-43e8-a6ba-b4b8d59a77b7.png">
+<img width="391" alt="ภาพถ่ายหน้าจอ 2565-10-20 เวลา 17 56 47" src="https://user-images.githubusercontent.com/107698198/196930696-ed40ec78-2eb2-4eb9-9f36-649b3b7525b3.png">
+
+### Base Model
+<img width="390" alt="ภาพถ่ายหน้าจอ 2565-10-20 เวลา 17 57 00" src="https://user-images.githubusercontent.com/107698198/196930703-314c8821-9a7a-462d-9937-6e690d789dbc.png">
+<img width="413" alt="ภาพถ่ายหน้าจอ 2565-10-20 เวลา 17 57 09" src="https://user-images.githubusercontent.com/107698198/196930706-cf3f19a1-2a45-4ca9-bd23-adabbf9ecfba.png">
+
+
 ## MODEL(4) self-build model
 ### Model Finetuning 
 <img width="407" alt="ภาพถ่ายหน้าจอ 2565-10-19 เวลา 19 22 38" src="https://user-images.githubusercontent.com/107698198/196689766-89c8c5af-9b15-4d25-82ee-fb85f54b7f86.png">

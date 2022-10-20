@@ -88,9 +88,9 @@ test_generator = test_data_gen.flow_from_dataframe(dataframe=test,
 ## MODEL(1) VGG16 
 ### Import Model and Finetuning 
 
-Optimizer that implements the RMSprop algorithm. <br />
+Optimizer that implements the RMSprop algorithm <br />
 Learning Rate = 0.0001 <br />
-Computes the categorical crossentropy loss. <br />
+Computes the categorical crossentropy loss <br />
 
 ```
 from tensorflow.keras.applications.vgg16 import VGG16

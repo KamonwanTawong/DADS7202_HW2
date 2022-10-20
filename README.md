@@ -296,4 +296,19 @@ plt.show()
 
 
 ## CONCLUSION
-จากตารางสรุปผลจะเห็นได้ว่าค่าความแม่นยำของ Base model มีค่ามากกว่า Model finetuning แต่จากกราฟที่แสดงค่าความคลาดเคลื่อนและค่าความแม่นยำ ของ VGG-16, ResNet50, EfficientNet และ self-build model จะได้เห็นว่ากราฟ Model Finetuning จะมีความ smooth มากกว่า Base model และ Pre-Trained Models ที่ให้ค่าสูงที่สุด คือ EfficientNet ที่ค่าความแม่นยำ 0.7671
+จากตารางสรุปผลจะเห็นได้ว่าค่าความแม่นยำของ Base model มีค่ามากกว่า Model finetuning แต่จากกราฟที่แสดงค่าความคลาดเคลื่อนและค่าความแม่นยำ ของ VGG-16, ResNet50 และ EfficientNet จะได้เห็นว่ากราฟ Model Finetuning จะมีความ smooth มากกว่า Base model และ Pre-Trained Models ที่ให้ค่าสูงที่สุด คือ EfficientNet ที่ค่าความแม่นยำ 0.7671
+
+## REFERANCE
+[1]	Purva Huilgol — Published On August 18, 2020 and Last Modified On June 15th, 2022 from https://www.analyticsvidhya.com/blog/2020/08/top-4-pre-trained-models-for-image-classification-with-python-code/ <br />
+[2]	(Sep 5, 2021). ‘DSE4 G.6’ from https://medium.com/botnoi-classroom/ส่งคุกกี้เสี่ยงทาย-ให้-ai-ทำนายสายพันธุ์มะม่วงกัน-d379b7fc6d6e <br />
+[3]	‘ImageClassification’ from https://github.com/nicknochnack/ImageClassification/blob/main/Getting%20Started.ipynb <br />
+[4]	
+
+
+## END CREDIT
+งานชิ้นนี้เป็นส่วนหนึ่งของวิชา DADS7202 Deep Learning หลักสูตรวิทยาศาสตร์มหาบัณฑิต คณะสถิติประยุกต์ สถาบันบัณฑิตพัฒนบริหารศาสตร์
+
+กลุ่มปลาทองออกลูกเป็นไข่
+- 6410412001
+- 6410412008
+- 6410412017
